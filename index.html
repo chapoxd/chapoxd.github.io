@@ -3,11 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <header>
-        <h1>Tuxler VPN</h1>
-        <p>Compre su membresía ahora y proteja su privacidad en línea.</p>
-        <img src="https://i.ibb.co/VtJ9GRs/tuxler-icon.png" alt="tuxler-icon" border="0">
-    </header>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -30,10 +25,10 @@
         }
 
         header img {
-            max-width: 100%; /* Hace que la imagen se ajuste al ancho del contenedor */
+            max-width: 100%;
             height: auto;
             margin-top: 10px;
-            border-radius: 25px; /* Bordes redondos */
+            border-radius: 25px;
         }
 
         nav {
@@ -49,12 +44,8 @@
             font-weight: bold;
         }
 
-        nav a.tutorials {
-            /* Estilos específicos para el enlace de tutoriales si es necesario */
-        }
-
         .features, .pricing, .purchase, .licenses, .guide {
-            padding: 40px;
+            padding: 20px;
         }
 
         .licenses {
@@ -79,7 +70,7 @@
             cursor: pointer;
             margin: 10px;
             text-decoration: none;
-            flex: 0 0 calc(20% - 20px); /* 5 botones por fila, con 20px de espacio entre ellos */
+            flex: 0 0 calc(40% - 20px); /* 2 botones por fila, con 20px de espacio entre ellos */
         }
 
         .license-button:hover {
@@ -98,8 +89,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh; /* Ocupar toda la altura disponible para centrar verticalmente */
-            flex-direction: row; /* Cambiado a diseño de fila para alinear en horizontal */
+            flex-direction: column; /* Cambiado a diseño de columna por defecto */
         }
 
         #cuadro {
@@ -109,7 +99,7 @@
             text-align: center;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             margin: 20px;
-            width: 50%; /* Cambiado el ancho al 50% del contenedor padre */
+            width: 80%; /* Cambiado el ancho al 80% del contenedor padre */
             max-width: 400px;
         }
 
@@ -120,9 +110,9 @@
             color: #fff;
             text-decoration: none;
             border-radius: 5px;
-            font-size: 14px; /* Ajusta el tamaño de la fuente según sea necesario */
+            font-size: 14px;
             font-weight: bold;
-            margin-bottom: 20px; /* Espaciado inferior */
+            margin-bottom: 20px;
         }
 
         #enlaceBoton:hover {
@@ -130,38 +120,24 @@
         }
 
         #imagenDerecha {
-            max-width: 58%;
+            max-width: 100%;
             height: auto;
-            margin-left: 20px; /* Agregar margen izquierdo para separar la imagen del cuadro */
+            margin-top: 20px; /* Espaciado superior */
         }
 
         #textoVendedores {
-            margin-top: 20px; /* Agregar espacio arriba */
-	    text-align: center;
-        }
-
-        @media only screen and (max-width: 600px) {
-            .features, .pricing, .purchase, .licenses, .guide {
-                padding: 20px;
-            }
-
-            .license-button {
-                flex: 0 0 calc(40% - 20px); /* 2 botones por fila en dispositivos móviles, con 20px de espacio entre ellos */
-            }
-
-            #cuadro-container {
-                flex-direction: column; /* Cambiado a diseño de columna para dispositivos móviles */
-            }
-
-            #imagenDerecha {
-                margin-left: 0; /* Eliminar el margen izquierdo en dispositivos móviles */
-                margin-top: 20px; /* Agregar margen superior para separar la imagen del cuadro */
-            }
+            margin-top: 20px;
+            text-align: center;
+            font-size: 25px; /* Tamaño de fuente ajustado */
         }
     </style>
 </head>
 <body>
-    
+    <header>
+        <h1>Tuxler VPN</h1>
+        <p>Compre su membresía ahora y proteja su privacidad en línea.</p>
+        <img src="https://i.ibb.co/VtJ9GRs/tuxler-icon.png" alt="tuxler-icon" border="0">
+    </header>
 
     <nav>
         <a href="https://tuxlerseller.com/" target="_blank">Inicio</a>
@@ -169,8 +145,6 @@
         <a href="#">Revendedores</a>
         <a href="#">FAQ</a>
     </nav>
-	<h2 id="textoVendedores">Puedes confirmar que somos vendedores oficiales <a href="https://www.tuxlervpn.com/reseller736-tuxlersellercom/" target="_blank">AQUI</a>.</h2>
-
 
     <div id="cuadro-container">
         <div id="cuadro">
@@ -187,6 +161,8 @@
 
         <img id="imagenDerecha" src="https://i.ibb.co/rsqDzYG/tuxlerbadge-nobackground-1024x341.webp" alt="tuxlerbadge-nobackground-1024x341" border="0">
     </div>
+
+    <h2 id="textoVendedores">Puedes confirmar que somos vendedores oficiales <a href="https://www.tuxlervpn.com/reseller736-tuxlersellercom/" target="_blank">AQUI</a>.</h2>
 
     <footer>
         <p>&copy; 2023 Tuxler VPN. Todos los derechos reservados.</p>
