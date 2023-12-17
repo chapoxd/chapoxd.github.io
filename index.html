@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -95,12 +94,13 @@
             margin-top: auto;
         }
 
-	#cuadro-container {
-    	    display: flex;
+        #cuadro-container {
+            display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh; /* Ocupar toda la altura disponible para centrar verticalmente */
-	}
+            flex-direction: row; /* Cambiado a diseño de fila para alinear en horizontal */
+        }
 
         #cuadro {
             background-color: #fff;
@@ -109,24 +109,35 @@
             text-align: center;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             margin: 20px;
-	    width: 80%; /* Cambiado el ancho al 80% del contenedor padre */
-    	    max-width: 600px;
+            width: 50%; /* Cambiado el ancho al 50% del contenedor padre */
+            max-width: 400px;
         }
 
         #enlaceBoton {
             display: inline-block;
-            margin-top: 15px;
             padding: 10px 20px;
             background-color: #0CE2B2;
             color: #fff;
             text-decoration: none;
             border-radius: 5px;
-	    font-size: 14px; /* Ajusta el tamaño de la fuente según sea necesario */
+            font-size: 14px; /* Ajusta el tamaño de la fuente según sea necesario */
             font-weight: bold;
+            margin-bottom: 20px; /* Espaciado inferior */
         }
 
         #enlaceBoton:hover {
             background-color: #333;
+        }
+
+        #imagenDerecha {
+            max-width: 58%;
+            height: auto;
+            margin-left: 20px; /* Agregar margen izquierdo para separar la imagen del cuadro */
+        }
+
+        #textoVendedores {
+            margin-top: 20px; /* Agregar espacio arriba */
+	    text-align: center;
         }
 
         @media only screen and (max-width: 600px) {
@@ -136,6 +147,15 @@
 
             .license-button {
                 flex: 0 0 calc(40% - 20px); /* 2 botones por fila en dispositivos móviles, con 20px de espacio entre ellos */
+            }
+
+            #cuadro-container {
+                flex-direction: column; /* Cambiado a diseño de columna para dispositivos móviles */
+            }
+
+            #imagenDerecha {
+                margin-left: 0; /* Eliminar el margen izquierdo en dispositivos móviles */
+                margin-top: 20px; /* Agregar margen superior para separar la imagen del cuadro */
             }
         }
     </style>
@@ -149,17 +169,23 @@
         <a href="#">Revendedores</a>
         <a href="#">FAQ</a>
     </nav>
+	<h2 id="textoVendedores">Puedes confirmar que somos vendedores oficiales <a href="https://www.tuxlervpn.com/reseller736-tuxlersellercom/" target="_blank">AQUI</a>.</h2>
 
-    <div id="cuadro">
-	<h3>VERSION PREMIUM</h3>
-	<h3>$5.99/Mensual</h3><br>
-        <li>4X MAS RAPIDO QUE LA VERSION GRATIS.</li><br>
-	<li>CONEXION ILIMITADA.</li><br>
-	<li>CONEXIONES SEGURAS.</li><br>
-	<li>100 CAMBIOS DIARIOS DE UBICACIONES.</li><br>
-	<li>70.000+ IP FRESCAS CADA MES.</li><br>
-	<li>ACCESO A TODAS LAS UBICACIONES.</li><br>
-        <a id="enlaceBoton" href="https://tuxlerpremium.mysellix.io/product/6578ec27150f5" target="_blank">COMPRAR MEMBRESIA PREMIUM</a>
+
+    <div id="cuadro-container">
+        <div id="cuadro">
+            <h3>VERSION PREMIUM</h3>
+            <h3>$5.99/Mensual</h3><br>
+            <li>4X MAS RAPIDO QUE LA VERSION GRATIS.</li><br>
+            <li>CONEXION ILIMITADA.</li><br>
+            <li>CONEXIONES SEGURAS.</li><br>
+            <li>100 CAMBIOS DIARIOS DE UBICACIONES.</li><br>
+            <li>70.000+ IP FRESCAS CADA MES.</li><br>
+            <li>ACCESO A TODAS LAS UBICACIONES.</li><br>
+            <a id="enlaceBoton" href="https://tuxlerpremium.mysellix.io/product/6578ec27150f5" target="_blank">COMPRAR MEMBRESIA PREMIUM</a>
+        </div>
+
+        <img id="imagenDerecha" src="https://i.ibb.co/rsqDzYG/tuxlerbadge-nobackground-1024x341.webp" alt="tuxlerbadge-nobackground-1024x341" border="0">
     </div>
 
     <footer>
