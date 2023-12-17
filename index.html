@@ -4,11 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="https://i.ibb.co/dr2ssX4/icon-redonde-liviano.webp" type="image/x-icon">
-
-    <!-- También puedes especificar el formato para navegadores más antiguos -->
     <link rel="shortcut icon" href="https://i.ibb.co/dr2ssX4/icon-redonde-liviano.webp" type="image/x-icon">
-
-    <!-- Puedes incluir tamaños adicionales para diferentes dispositivos -->
     <link rel="apple-touch-icon" sizes="180x180" href="https://i.ibb.co/dr2ssX4/icon-redonde-liviano.webp">
     <style>
         body {
@@ -27,7 +23,7 @@
             text-align: center;
             padding: 20px;
             display: flex;
-            flex-direction: column;
+            flex-direction: column; /* Cambiado a diseño de columna */
             align-items: center;
         }
 
@@ -38,10 +34,55 @@
             border-radius: 25px;
         }
 
+        /* Menú desplegable de idiomas */
+        .idioma-selector {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            cursor: pointer;
+            background-color: #0CE2B2;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .idioma-selector:hover {
+            background-color: #333;
+        }
+
+        .idioma-menu {
+            display: none;
+            position: absolute;
+            top: 100%; /* Alinea el menú por debajo del botón */
+            right: 0;
+            background-color: #333;
+            min-width: 160px;
+            border-radius: 5px;
+        }
+
+        .idioma-menu a {
+            color: #fff;
+            padding: 12px 16px;
+            display: block;
+            text-decoration: none;
+        }
+
+        .idioma-menu a:hover {
+            background-color: #0CE2B2;
+        }
+
+        .idioma-selector:hover .idioma-menu {
+            display: block;
+        }
+
         nav {
             text-align: center;
             background-color: #444;
             padding: 10px 0;
+            z-index: 1; /* Añadido un índice z para posicionar sobre el contenido */
         }
 
         nav a {
@@ -49,39 +90,6 @@
             text-decoration: none;
             margin: 0 15px;
             font-weight: bold;
-        }
-
-        .features, .pricing, .purchase, .licenses, .guide {
-            padding: 20px;
-        }
-
-        .licenses {
-            text-align: center;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
-        .licenses h2 {
-            width: 100%;
-            margin-bottom: 20px;
-        }
-
-        .license-button {
-            background-color: #4CAF50;
-            color: #fff;
-            padding: 15px 30px;
-            font-size: 16px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            margin: 10px;
-            text-decoration: none;
-            flex: 0 0 calc(40% - 20px); /* 2 botones por fila, con 20px de espacio entre ellos */
-        }
-
-        .license-button:hover {
-            background-color: #45a049;
         }
 
         footer {
@@ -96,7 +104,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            flex-direction: column; /* Cambiado a diseño de columna por defecto */
+            flex-direction: column;
         }
 
         #cuadro {
@@ -106,7 +114,7 @@
             text-align: center;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             margin: 20px;
-            width: 80%; /* Cambiado el ancho al 80% del contenedor padre */
+            width: 80%;
             max-width: 400px;
         }
 
@@ -129,22 +137,31 @@
         #imagenDerecha {
             max-width: 100%;
             height: auto;
-            margin-top: 20px; /* Espaciado superior */
+            margin-top: 20px;
         }
 
         #textoVendedores {
             margin-top: 20px;
             text-align: center;
-            font-size: 25px; /* Tamaño de fuente ajustado */
+            font-size: 25px;
         }
     </style>
 </head>
 <body>
     <header>
         <h1>Tuxler VPN</h1>
-        <h1 lang="en">Hello World</h1>
         <p>Compre su membresía ahora y proteja su privacidad en línea.</p>
         <img src="https://i.ibb.co/VtJ9GRs/tuxler-icon.png" alt="tuxler-icon" border="0">
+
+        <!-- Menú desplegable de idiomas -->
+        <div class="idioma-selector">
+            Seleccionar idioma
+            <div class="idioma-menu">
+                <a href="#" lang="es">Español</a>
+                <a href="#" lang="en">English</a>
+                <!-- Agrega más idiomas según sea necesario -->
+            </div>
+        </div>
     </header>
 
     <nav>
