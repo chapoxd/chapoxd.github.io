@@ -165,16 +165,164 @@
             margin-bottom: 18px;
         }
 
-	@media only screen and (max-width: 800px) {
+        @media only screen and (max-width: 800px) {
             #cuadro-container {
-                background-image: url('https://i.ibb.co/zXtzvnM/phone.png'); /* Reemplaza con la URL de tu imagen móvil */
-                background-size: cover;
+                background-size: cover; /* Cambia a cover para dispositivos con menos de 800px */
             }
 
             #cuadro {
-                background-color: rgba(255, 255, 255, 0.8); /* Cambia la opacidad del fondo blanco si es necesario */
+                max-width: 80%; /* Ajusta el porcentaje según sea necesario */
+                top: 50%; /* Centra verticalmente en dispositivos con menos de 800px */
+                left: 50%; /* Centra horizontalmente en dispositivos con menos de 800px */
+                transform: translate(-50%, -50%);
+            }
+        }
+    </style><style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #FFC000;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 10px;
+            border-radius: 25px;
+        }
+
+        .idioma-selector {
+            display: none;
+        }
+
+        #cambiarEspanol {
+            position: absolute;
+            top: 10px;
+            margin-right: 10px;
+            right: 0;
+            width: 130px;
+            height: 13px;
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #0CE2B2;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        #cambiarEspanol:hover {
+            background-color: #ffc000;
+        }
+
+        nav {
+            text-align: center;
+            background-color: #444;
+            padding: 10px 0;
+            z-index: 1;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px; /* Ajusta el margen superior */
+        }
+
+        #cuadro-container {
+            position: relative;
+            background-image: url('https://i.ibb.co/pRx1ZzZ/laptop.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        #cuadro {
+            background-color: rgba(255, 255, 255, 1);
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 20px auto; /* Ajusta el margen superior e inferior */
+            width: 80%;
+            max-width: 400px;
+            z-index: 2; /* Asegura que el cuadro blanco esté sobre la imagen de fondo */
+            position: relative;
+        }
+
+        #enlaceBoton {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #0CE2B2;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        #enlaceBoton:hover {
+            background-color: #ffc000;
+        }
+
+        #textoVendedores {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 25px;
+        }
+
+        ul {
+            padding-left: 0;
+            list-style: none;
+        }
+
+        li {
+            margin-bottom: 18px;
+        }
+
+        @media only screen and (max-width: 800px) {
+            #cuadro-container {
+                background-size: contain; /* Cambia a cover para dispositivos con menos de 800px */
+		background-image: url('https://i.ibb.co/zXtzvnM/phone.png');
             }
 
+            #cuadro {
+                max-width: 38%; /* Ajusta el porcentaje según sea necesario */
+                top: 33%; /* Centra verticalmente en dispositivos con menos de 800px */
+                left: 23%; /* Centra horizontalmente en dispositivos con menos de 800px */
+                transform: translate(-50%, -50%);
+            }
+        }
     </style>
 </head>
 <body>
