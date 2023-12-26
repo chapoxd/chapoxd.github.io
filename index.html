@@ -105,10 +105,16 @@
             color: #fff;
             text-align: center;
             padding: 10px;
-            margin-top: auto;
+            margin-top: 20px; /* Ajusta el margen superior */
         }
 
         #cuadro-container {
+            position: relative;
+            background-image: url('https://i.ibb.co/pRx1ZzZ/laptop.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -116,14 +122,16 @@
         }
 
         #cuadro {
-            background-color: #fff;
+            background-color: rgba(255, 255, 255, 1);
             border-radius: 10px;
             padding: 20px;
             text-align: center;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            margin: 20px;
+            margin: 20px auto; /* Ajusta el margen superior e inferior */
             width: 80%;
             max-width: 400px;
+            z-index: 2; /* Asegura que el cuadro blanco esté sobre la imagen de fondo */
+            position: relative;
         }
 
         #enlaceBoton {
@@ -142,12 +150,6 @@
             background-color: #ffc000;
         }
 
-        #imagenDerecha {
-            max-width: 100%;
-            height: auto;
-            margin-top: 20px;
-        }
-
         #textoVendedores {
             margin-top: 20px;
             text-align: center;
@@ -162,6 +164,17 @@
         li {
             margin-bottom: 18px;
         }
+
+	@media only screen and (max-width: 800px) {
+            #cuadro-container {
+                background-image: url('https://i.ibb.co/zXtzvnM/phone.png'); /* Reemplaza con la URL de tu imagen móvil */
+                background-size: cover;
+            }
+
+            #cuadro {
+                background-color: rgba(255, 255, 255, 0.8); /* Cambia la opacidad del fondo blanco si es necesario */
+            }
+
     </style>
 </head>
 <body>
@@ -193,8 +206,6 @@
             </ul>
             <a id="enlaceBoton" href="https://tuxlerpremium.mysellix.io/product/6578ec27150f5" target="_blank" title="Comprar Tuxler VPN Premium">COMPRAR MEMBRESIA PREMIUM</a>
         </div>
-
-        <img id="imagenDerecha" src="https://i.ibb.co/rsqDzYG/tuxlerbadge-nobackground-1024x341.webp" alt="tuxlerbadge-nobackground-1024x341">
     </div>
 
     <h2 id="textoVendedores" lang="en">Puedes confirmar que somos vendedores oficiales <a href="https://www.tuxlervpn.com/reseller736-tuxlersellercom/" target="_blank" title="Confirmar vendedores oficiales Tuxler VPN">AQUI</a></h2>
